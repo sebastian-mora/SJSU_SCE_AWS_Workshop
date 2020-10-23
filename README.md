@@ -116,7 +116,7 @@ Buckets just like users need to have a policy attached to them. We need to tell 
 }
 ```
 
-**Note: arn:aws:s3:::YOUR_BUCKET_NAME/* could be dangrou**
+**Note: arn:aws:s3:::YOUR_BUCKET_NAME/* could be dangerous**
 
 Now when we visit the link we can see the site!
 
