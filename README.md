@@ -40,9 +40,12 @@ Congratulations we have used our root account to create a new admin user. Take e
 
 Now using our new admin account let us rent a server from AWS. In AWS this service is called EC2. Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. 
 
+![ec2](./imgs/datacenter.jpeg)
+
 Before we can deploy a server in our cloud environment we first need to define a network to put the server on. There are many configurations we can do but we will do the most basic. A simple public subnet. A network in AWS is called a VPC (Virtual Private Cloud)
 
 ### Creating a VPC
+![vpc](./imgs/vpc.png)
 1. In the console navigate to VPC
 2. Click VPC Wizard. 
 3. Select a single public subnet 
@@ -71,13 +74,15 @@ Navigate to the "Instances" tab in EC2 and right-click on the instance. In the m
 ### Advanced EC2 Applicaitons 
 
 #### Elastic Load Balencing (Scaling)
-![alt text](./imgs/scaling.png)
+![scaling](./imgs/scaling.png)
 
 ## AWS S3 "Bucket" (Storage)
 
 Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics
 
-S3 are often called buckets and can store data at scale and additionally can be used for static website hosting or content distribution. In this case, we will deploy a simple static website. 
+S3 are often called buckets and can store data at scale and additionally can be used for static website hosting or content distribution. In this case, we will deploy a simple static website.
+
+![s3](./imgs/s3.jpeg)
 
 ### Creating a Bucket
 
