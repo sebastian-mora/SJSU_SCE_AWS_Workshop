@@ -68,6 +68,10 @@ Congrats, we just launched our first server but how do we connect?
 
 Navigate to the "Instances" tab in EC2 and right-click on the instance. In the menu, press connects and navigate to SSH. Here we see a command to use to connect to the instance. Using Putty or Bash we can connect!
 
+### Advanced EC2 Applicaitons 
+
+#### Elastic Load Balencing (Scaling)
+![alt text](./imgs/scaling.png)
 
 ## AWS S3 "Bucket" (Storage)
 
