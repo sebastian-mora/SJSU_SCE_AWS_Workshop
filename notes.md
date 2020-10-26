@@ -23,7 +23,7 @@ AWS is a cloud service from Amazon, which provides services in the form of build
 
 AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
 
-IAM is the rule book of AWS. It controls users and services. Every user and services needs permissions which are defined by IAM.
+IAM is the rule book of AWS. It controls users and services. Every user and services permissions are defined by IAM.
 
 1. Creating and Admin using account. (Using the root account as a admin is bad practice)
 2. In Console naviagate to IAM.
@@ -34,13 +34,13 @@ IAM is the rule book of AWS. It controls users and services. Every user and serv
 7. Under policies select AdministratorAccess 
 8. Create the user and save the credntilas 
 
-Congraudations we have used our root account to create a new adming user. Take extra notice of all the options we have when attaching policeis to our user. IAM allows us to use prediifd polcies or crerate polices with very fine detilas to give the exact amount of access to a user or service. Now go ahead and login to your new user account.
+Congratulations we have used our root account to create a new adming user. Take notice of the options we have when attaching policies to our user. IAM allows us to use predefined polcies or create polices with very fine detail to give the exact amount of access to a user or service.Always follow the practice of least privilege. Now login to your new user account.
 
 ## AWS EC2 (Compute)
 
-Now using our new admin account let us rent a server from AWS. In AWS this services is called EC2. Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. 
+Now using our new account let us rent a server from AWS. In AWS this service is called EC2. Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. 
 
-Before we can deploy a server in our cloud enviroent we first need to define a network to put the server on. There are many configuration we can do but we will do the most basic. A simple public subnet. A network in AWS is called a VPC (Virtual Private Cloud)
+Before we deploy a server in our cloud environment need to define a network to put the server on. A network in AWS is called a VPC (Virtual Private Cloud). There are many configuration we can do but we will do the most basic. A simple public subnet.
 
 ### Creating a VPC
 1. In the console navaigate to VPC
@@ -49,7 +49,7 @@ Before we can deploy a server in our cloud enviroent we first need to define a n
 4. Name your VPC and subnet
 5. Create
 
-AWS will now autoamtica go out and confgire our netowrk...and were done. Now we can go to EC2 and deploy a server.
+AWS will now automatically go  and configure our network. Now we can go to EC2 and deploy a server.
 
 ### Deploying a Server 
 
@@ -57,23 +57,27 @@ To deploy a server or EC2 we need a few things. First is the VPC to deploy on, a
 
 1. Naviage to EC2
 2. Click launch instance
-3. Selelect Ubuntu
+3. Select Ubuntu
 4. Select t2.micro for Instance Type
-5. click "Next: Instance detials". Find the option asdisnge dpublic ip and set that to True.
+5. click "Next: Instance detials". Find the option assign public ip and set that to True.
 6. click "Review and Launch" 
 7. Create a new keypair and download
 8. Launch instance
 
 Congrats we just launched our first server but how do we connect? 
 
-Navigate to the "Instaces" tab in EC2 and right click on the isntace. In the menu press connect and naviate tot SSH. Here we see a command to use to connect to the instace. Using Putty or Bash we can connect!
+Navigate to the "Instaces" tab in EC2 and right click on the instance. In the menu press connect and naviate tot SSH. Here we see a command to use to connect to the instace. Using Putty or Bash we can connect!
 
+### Advanced EC2 Applicaitons 
+
+#### Elastic Load Balencing (Scaling)
+![alt text](./imgs/scaling.png)
 
 ## AWS S3 "Bucket" (Storage)
 
 Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics
 
-S3 are often called buckets and can store data at scale and additonly can be used for static website hosting or content distrubutuin. In this case we will deploy a simple static website. 
+S3 often called bucket and can store data at scale. In this case we will deploy a simple static website. 
 
 ### Creating a Bucket
 
