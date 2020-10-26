@@ -132,5 +132,7 @@ Buckets just like users need to have a policy attached to them. We need to tell 
 Now when we visit the link we can see the site!
 
 
-
-
+## Other Topics 
+- Terraform (Infrastructure as Code)
+- Continuous Deployment 
+- Container and Orchestration (ECS / Kubernetes) 
