@@ -58,6 +58,8 @@ AWS will now automatically go out and configure our network...and we're done. No
 
 To deploy a server or EC2 we need a few things. First is the VPC to deploy on, an Operating system, the type of hardware we want, and finally the networking.
 
+![pricing](./imgs/ec2price.png)
+
 1. Navigate to EC2
 2. Click launch instance
 3. Select Ubuntu
