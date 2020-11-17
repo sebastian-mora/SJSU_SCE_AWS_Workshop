@@ -132,6 +132,38 @@ Buckets just like users need to have a policy attached to them. We need to tell 
 Now when we visit the link we can see the site!
 
 
+So far we have configured two different services but how do we connect them? Let say you want to use the EC2 instance to add files to our S3 bucket. To do this first we need to give our EC2 an "instance role". An instance role is just like a user role but for machines/services. It tells AWS what we want our services to be able to access and how. Following the rule of least permission, we want to give our EC2 the permissions to add and read files from our S3 bucket. Let's start by defining a new role. 
+
+### Create an Instance Role
+
+To create a new instance role for our EC2 we need two things the instance role and a policy. A role can have many policies, and each policy defines a set of permissions.
+
+#### Create a new policy
+
+This policy will outline the actions we can perform on a specific S3 bucket. 
+
+1. Navigate to IAM.
+2. On the right-hand menu select "Policies".
+3. Click "Create Policies".
+4. For services select S3.
+5. For Actions select the actions, "GetObject" and "PutObject".
+6. *Important* Always define a resource no "*" Add the ARN of the bucket.
+
+### Creating the instance Role 
+
+Now we are ready to create the role for our EC2. 
+
+1. Navigate to IAM.
+2. On the right-hand menu select "Roles".
+3. Click "Create role".
+4. For "Trusted entity" leave "AWS service selected" 
+5. For "use case" select EC2.
+6. Under permissions attached to our new policy.
+
+There is one last step which is to attach the role to the EC2. We do this by navigating back to the EC2 control panel and right-clicking on the instance. Using the drop
+down menu, we can select our new role. 
+
+
 ## Other Topics 
 - Terraform (Infrastructure as Code)
 - Continuous Deployment 
